@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap>
+    
+    <resultMap id="C_NaturalMap" class="dbapplication.Entidades.C_Natural">
+	<result property="id_cliente" column="ID_CLIENTE" />
+	<result property="nombre" column="NOMBRE" />
+    <result property="apellido" column="APELLIDO" />
+    <result property="direccion" column="DIRECCION" />
+    <result property="telf" column="TELF" />
+    <result property="mail" column="MAIL" />
+    <result property="ci" column="CI" />
+    </resultMap>
+    
+    <select id="buscarTodasLosClientes" resultMap="C_NaturalMap">
+        SELECT 
+            ID_CLIENTE,CI,NOMBRE,APELLIDO,DIRECCION,TELF,MAIL
+        FROM 
+            C_NATURAL
+    </select>
+    
+    <select id="buscarClientePorID" parameterClass="int" resultMap="C_NaturalMap">
+        SELECT 
+          ID_CLIENTE,NOMBRE,CI,APELLIDO,DIRECCION,TELF,MAIL
+        FROM 
+            C_NATURAL
+        WHERE
+           ID_CLIENTE = #value#
+    </select>
+    
+    <insert id="guardarCliente" parameterClass="dbapplication.Entidades.C_Natural">
+        INSERT INTO
+            C_NATURAL
+        VALUES
+            (#id_cliente#,#ci#,#nombre#,#apellido#,#direccion#,#telf#,#mail#)
+    </insert>
+	
+</sqlMap>
