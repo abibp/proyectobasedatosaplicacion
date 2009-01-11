@@ -12,8 +12,6 @@ import com.ibatis.sqlmap.client.SqlMapClientBuilder;
 import java.io.IOException;
 import java.io.Reader;
 import java.sql.SQLException;
-import java.util.Collection;
-import org.apache.log4j.Logger;
 import dbapplication.Entidades.*;
 /**
  *
@@ -22,7 +20,7 @@ import dbapplication.Entidades.*;
 public class Manejador {
 
      // Variable de Instancia para la configuracion de Log4j
-    private static Logger logger = Logger.getLogger(Manejador.class);
+//    private static Logger logger = Logger.getLogger(Manejador.class);
 
 
 //**********************CONSULTAR**************************\\
@@ -59,15 +57,15 @@ System.out.println("Iniciando carga del archivo ibatis-config.xml");
 
             SqlMapClient sqlMap = SqlMapClientBuilder.buildSqlMapClient(reader);
 
-            C_Natural nuevo = new C_Natural();
+            ClienteNatural nuevo = new ClienteNatural();
             
-            nuevo.setId_cliente(01);
-            nuevo.setNombre("pepe");
-            nuevo.setApellido("perez");
-            nuevo.setDireccion("dir");
-            nuevo.setTelf(123);
-            nuevo.setMail("mail");
-            nuevo.setCi(234);
+//            nuevo.setId_cliente(01);
+//            nuevo.setNombre("pepe");
+//            nuevo.setApellido("perez");
+//            nuevo.setDireccion("dir");
+//            nuevo.setTelf(123);
+//            nuevo.setMail("mail");
+//            nuevo.setCi(234);
             
 //            logger.info("Registrando la persona " + nuevo);-------------------
 System.out.println("Registrando la persona " + nuevo);
