@@ -14,6 +14,7 @@ public class Proveedor extends Persona {
     private int idProveedor;
     private ArrayList insumos;
     private ArrayList ordenesDeCompra;
+    private ArrayList pagos;
 
     /**
      * Constructor por defecto
@@ -80,5 +81,19 @@ public class Proveedor extends Persona {
      */
     public void setOrdenesDeCompra(ArrayList ordenesDeCompra) {
         this.ordenesDeCompra = ordenesDeCompra;
+    }
+
+    /**
+     * @return the pagos
+     */
+    public ArrayList getPagos() {
+        return pagos;
+    }
+
+    /**
+     * @param pagos the pagos to set
+     */
+    public void setPagos(ArrayList pagos) {
+        this.pagos = pagos;
     }
 }

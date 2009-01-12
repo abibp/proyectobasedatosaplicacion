@@ -4,6 +4,8 @@
  */
 package dbapplication.Entidades;
 
+import java.util.ArrayList;
+
 /**
  * Almacena información para manipular empleados
  * @author prometheus
@@ -19,6 +21,7 @@ public class Empleado extends Persona {
     private String cargo;
     private int sueldo;
     private int cedulaIdentidad;
+    private ArrayList pagos;
 
     /**
      * Constructor por Defecto
@@ -118,5 +121,19 @@ public class Empleado extends Persona {
      */
     public void setCedulaIdentidad(int cedulaIdentidad) {
         this.cedulaIdentidad = cedulaIdentidad;
+    }
+
+    /**
+     * @return the pagos
+     */
+    public ArrayList getPagos() {
+        return pagos;
+    }
+
+    /**
+     * @param pagos the pagos to set
+     */
+    public void setPagos(ArrayList pagos) {
+        this.pagos = pagos;
     }
 }

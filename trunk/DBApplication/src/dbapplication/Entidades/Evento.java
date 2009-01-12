@@ -12,6 +12,7 @@ package dbapplication.Entidades;
 
 import java.sql.Time;
 import java.util.Date;
+import java.util.ArrayList;
 
 /**
  * Clase Evento, almacena información para manejar datos de eventos realizados o por realizar.
@@ -24,6 +25,7 @@ public class Evento {
     private Time horaFin;
     private String direccion;
     private Empleado organizador;
+    private ArrayList pagos;
 
     /**
      * Constructor por Defecto
@@ -49,5 +51,19 @@ public class Evento {
         this.horaFin = fin;
         this.direccion = dir;
         this.organizador = ejec;
+    }
+
+    /**
+     * @return the pagos
+     */
+    public ArrayList getPagos() {
+        return pagos;
+    }
+
+    /**
+     * @param pagos the pagos to set
+     */
+    public void setPagos(ArrayList pagos) {
+        this.pagos = pagos;
     }
 }
